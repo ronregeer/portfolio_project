@@ -66,6 +66,14 @@
     <br />
     <h2>Latest posts</h2>
     <hr />
+    {% for myblog in blogs.all %}
+      <a href=""><h3>{{ myblog.title }}</h3></a>
+      {{ myblog.eurtime }}
+      <br />
+      <img class="img-fluid" src= '{{ myblog.image.url }}' height="200" width="200"</>
+      <br />
+      <p>{{ myblog.summary }}</p>
+    {% endfor %}
   </div>
 
   </main>
